@@ -11,6 +11,7 @@ const publicRoutes = [
   { path: "/sign-in", isAuthenticated: "redirect" },
   { path: "/sign-up", isAuthenticated: "redirect" },
   { path: "/forgot-password", isAuthenticated: "redirect" },
+  { path: "/not-found", isAuthenticated: "next" },
   { path: "/terms", isAuthenticated: "next" },
 ] as const;
 
@@ -54,6 +55,6 @@ export const config: MiddlewareConfig = {
      * - _next/image (image optimization files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
      */
-    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|assets).*)",
   ],
 };

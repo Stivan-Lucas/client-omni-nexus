@@ -3,10 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -14,11 +11,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "",
+  title: "Omni Nexus",
   description:
     "Chat rápido, seguro e em tempo real com criptografia avançada, detectando e bloqueando golpes e fraudes automaticamente.",
   applicationName: "Omni Nexus",
-  authors: [{ name: "Equipe Omni Nexus", url: "https://omninexus.com.br/" }],
+  authors: [{ name: "Equipe Omni Nexus", url: "https://omninexus.com.br" }],
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://omninexus.com.br",
+  },
   keywords: [
     "chat seguro",
     "secure chat",
@@ -145,25 +146,21 @@ export const metadata: Metadata = {
     "chat instantâneo protegido",
     "protected instant chat",
   ],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://omninexus.com.br/",
-  },
   openGraph: {
     type: "website",
-    url: "https://omninexus.com.br/",
+    url: "https://omninexus.com.br",
     title: "Omni Nexus | Chat seguro e em tempo real",
     description:
       "Converse sem riscos: chat em tempo real com criptografia avançada que detecta e bloqueia fraudes automaticamente.",
     siteName: "Omni Nexus",
-    images: [
-      {
-        url: "https://omninexus.com.br/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Omni Nexus Chat Seguro",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/assets/og-image.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Omni Nexus Chat Seguro",
+    //   },
+    // ],
   },
   twitter: {
     card: "summary_large_image",
@@ -172,11 +169,11 @@ export const metadata: Metadata = {
     title: "Omni Nexus | Chat seguro e em tempo real",
     description:
       "Chat rápido e seguro com criptografia avançada, detectando e bloqueando fraudes automaticamente.",
-    images: "https://omninexus.com.br/og-image.png",
+    // images: "/assets/og-image.png",
   },
   icons: {
-    icon: "https://omninexus.com.br/favicon.ico",
-    apple: "https://omninexus.com.br/apple-icon.png",
+    icon: "/assets/favicon.ico",
+    //   apple: `/apple-icon.png`,
   },
   publisher: "Omni Nexus",
   creator: "Equipe Omni Nexus",
